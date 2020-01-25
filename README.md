@@ -138,5 +138,54 @@ let isPresent = m["k2"] != nil
 
 ```go
 
+
+## Functions
+```go
+func plus(a int, b int) int { }
+func plus(a, b int) int { }
 ```
-## Range
+```swift
+func plus(a: Int, b: Int) -> Int { }
+```
+
+### Multiple return values
+```go
+func vals() (int, int) {
+    return 3, 7
+}
+```
+```swift
+func vals() -> (Int, Int) {
+    return (3, 7)
+}
+```
+
+### Variadic functions
+```go
+func sum(nums ...int) {
+    fmt.Print(nums, " ")
+}
+sum(1, 2) // [1 2]
+sum(1, 2, 3) // [1 2 3]
+ ```
+
+### Closures
+
+```go
+func intSeq() func() int {
+    i := 0
+    return func() int {
+        i++
+        return i
+    }
+}
+```
+```swift
+func intSeq() -> (() -> Int) {
+    var i = 0
+    return func() -> Int {
+        i++
+        return i
+    }
+}
+```
