@@ -136,7 +136,36 @@ value, isPresent := m["k2"]
 let isPresent = m["k2"] != nil
 ```
 
+### Range
 ```go
+nums := []int{2, 3, 4}
+sum := 0
+for index, value := range nums {
+    sum += value
+}
+// sum: 9
+```
+```swift
+for i in 2...4 {
+}
+```
+```go
+someMap := map[string]string{"a": "apple", "b": "banana"}
+for key := range someMap {}
+for key, value := range someMap {}
+for i, unicodeDecimalValue := range "go" {}
+```
+
+### Pointers
+```go
+func zeroptr(iptr *int) {
+    *iptr = 0
+}
+i := 1
+zeroptr(&i)
+fmt.Println("zeroptr:", i)  // 0
+fmt.Println("pointer:", &i) // 0x42131100
+```
 
 
 ## Functions
