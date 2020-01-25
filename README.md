@@ -55,7 +55,8 @@ whatAmI := func(i interface{}) {
 }
 ```
 
-## Arrays
+## Data types
+### Arrays
 ```go
 var a [5]int // [0 0 0 0 0]
 ```
@@ -98,14 +99,14 @@ for i in 0..<2 {
 }
 ```
 
-## Slices
+### Slices
 ```go
 s := make([]string, 3) // [   ]
 s[0] = "a"
 s[0:2] // [a  ] 
 ```
 
-## Maps
+### Maps
 ```go
 n := map[string]int{"foo": 1, "bar": 2}
 m := make(map[string]int)
