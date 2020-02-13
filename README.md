@@ -170,8 +170,9 @@ for index, value := range nums {
 // sum: 9
 ```
 #### Swift
+Array enumeration
 ```swift
-for i in 2...4 {
+for value in [2, 3, 4] {
 }
 ```
 #### Go
