@@ -1,24 +1,29 @@
 # SwiftGoCheatsheet
 
 ## Print
+#### Go
 ```go
 fmt.Println()
 ```
 
+#### Swift
 ```swift
 print()
 ```
 ## Constants
 
+#### Go
 ```go
 const s string = "constant"
 ```
 
+#### Swift
 ```swift
 let string = "constant"
 ```
 
-## For
+## For Loop
+#### Go
 ```go
 for {}
 for i <= 3 {
@@ -30,6 +35,7 @@ for j := 7; j <= 9; j++ {
 }
 ```
 ## If/Else
+#### Go
 ```go
 // any variables declared are available in all branches
 if num := 9; num < 0 {
@@ -42,6 +48,7 @@ if num := 9; num < 0 {
 ```
 
 ## Switch
+#### Go
 ```go
 whatAmI := func(i interface{}) {
     switch t := i.(type) {
@@ -57,28 +64,35 @@ whatAmI := func(i interface{}) {
 
 ## Data types
 ### Arrays
+#### Go
 ```go
 var a [5]int // [0 0 0 0 0]
 ```
+#### Swift
 ```swift
 var a = []
 ```
 
+#### Go
 ```go
 fmt.Println("len:" len(a)) // len: 5
 ```
+#### Swift
 ```swift
 print("len: \(a.count)") // len: 5
 ```
 
+#### Go
 ```go
 b := [5]int{1, 2, 3} // [1, 2, 3]
 ```
 
+#### Swift
 ```swift
 let b = [1, 2, 3] // [1, 2, 3]
 ```
 
+#### Go
 ```go
 var twoD [2][3]int
 for i := 0; i < 2; i++ {
@@ -88,6 +102,7 @@ for i := 0; i < 2; i++ {
 }
 fmt.Println("2d: ", twoD)
 ```
+#### Swift
 ```swift
 var twoD: [[Int]] = []
 for i in 0..<2 {
@@ -100,6 +115,7 @@ for i in 0..<2 {
 ```
 
 ### Slices
+#### Go
 ```go
 s := make([]string, 3) // [   ]
 s[0] = "a"
@@ -110,6 +126,7 @@ s[0:2] // [a  ]
 s = []
 ```
 ### Maps
+#### Go
 ```go
 n := map[string]int{"foo": 1, "bar": 2}
 m := make(map[string]int)
@@ -119,6 +136,7 @@ fmt.Println("map:", m) // map[k1:7 k2:13]
 delete(m, "k2")
 ```
 
+#### Swift
 ```swift
 let n = ["foo": 1, "bar": 2]
 var m: [String: Int] = [:]
@@ -128,6 +146,7 @@ print("map:", m) // [ "k1":7, "k2":13 ]
 m.removeValue(forKey: "k2")
 ```
 
+#### Go
 ```go
 value, isPresent := m["k1"]
 //value: 7, isPresent: true
@@ -135,11 +154,13 @@ value, isPresent := m["k1"]
 value, isPresent := m["k2"]
 //value: 0, isPresent: false
 ```
+#### Swift
 ```swift
 let isPresent = m["k2"] != nil
 ```
 
 ### Range
+#### Go
 ```go
 nums := []int{2, 3, 4}
 sum := 0
@@ -148,10 +169,12 @@ for index, value := range nums {
 }
 // sum: 9
 ```
+#### Swift
 ```swift
 for i in 2...4 {
 }
 ```
+#### Go
 ```go
 someMap := map[string]string{"a": "apple", "b": "banana"}
 for key := range someMap {}
@@ -160,6 +183,7 @@ for i, unicodeDecimalValue := range "go" {}
 ```
 
 ### Pointers
+#### Go
 ```go
 func zeroptr(iptr *int) {
     *iptr = 0
@@ -171,6 +195,7 @@ fmt.Println("pointer:", &i) // 0x42131100
 ```
 
 ### Structs
+#### Go
 ```go
 type person struct {
     name string
@@ -180,20 +205,24 @@ p := person{name: name}
 ```
 
 ## Functions
+#### Go
 ```go
 func plus(a int, b int) int { }
 func plus(a, b int) int { }
 ```
+#### Swift
 ```swift
 func plus(a: Int, b: Int) -> Int { }
 ```
 
 ### Multiple return values
+#### Go
 ```go
 func vals() (int, int) {
     return 3, 7
 }
 ```
+#### Swift
 ```swift
 func vals() -> (Int, Int) {
     return (3, 7)
@@ -201,6 +230,7 @@ func vals() -> (Int, Int) {
 ```
 
 ### Variadic functions
+#### Go
 ```go
 func sum(nums ...int) {
     fmt.Print(nums, " ")
@@ -211,6 +241,7 @@ sum(1, 2, 3) // [1 2 3]
 
 ### Closures
 
+#### Go
 ```go
 func intSeq() func() int {
     i := 0
@@ -220,6 +251,7 @@ func intSeq() func() int {
     }
 }
 ```
+#### Swift
 ```swift
 func intSeq() -> (() -> Int) {
     var i = 0
@@ -231,6 +263,7 @@ func intSeq() -> (() -> Int) {
 ```
 
 ### Methods
+#### Go
 ```go
 type rect struct {
     width, height int
@@ -247,6 +280,7 @@ r.perim()
 ```
 
 ## Interfaces
+#### Go
 ```go
 package main
 
