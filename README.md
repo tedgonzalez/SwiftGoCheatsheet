@@ -178,9 +178,12 @@ for value in [2, 3, 4] {
 #### Go
 ```go
 someMap := map[string]string{"a": "apple", "b": "banana"}
-for key := range someMap {}
-for key, value := range someMap {}
-for i, unicodeDecimalValue := range "go" {}
+for key := range someMap {
+}
+for key, value := range someMap {
+}
+for i, unicodeDecimalValue := range "go" {
+}
 ```
 
 ### Pointers
