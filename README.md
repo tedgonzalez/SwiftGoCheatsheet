@@ -105,7 +105,10 @@ s := make([]string, 3) // [   ]
 s[0] = "a"
 s[0:2] // [a  ] 
 ```
-
+#### Swift
+```swift
+s = []
+```
 ### Maps
 ```go
 n := map[string]int{"foo": 1, "bar": 2}
